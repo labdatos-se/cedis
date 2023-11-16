@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_103e050c688d50a1d399f92c1904ecb5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<div style="position: fixed; bottom: 50px; left: 80%; z-index: 9999; background-color: white; padding: 10px; 
+     border: 1px solid black; opacity: 0.8; font-size: 12px;">
+    <a href="https://github.com/labdatos-se/cedis_supermercados/raw/main/cedis.xlsx" target="_blank" style="text-decoration: none; color: black;">Descargar listado de CEDIS</a>
+</div>
+    
+            <div class="folium-map" id="map_103e050c688d50a1d399f92c1904ecb5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_103e050c688d50a1d399f92c1904ecb5 = L.map(
+                "map_103e050c688d50a1d399f92c1904ecb5",
+                {
+                    center: [19.432608, -99.133209],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4dd4bc5020006e089605326873c7fb81 = L.tileLayer(
+                "http://www.google.cn/maps/vt?lyrs=s@189\u0026gl=cn\u0026x={x}\u0026y={y}\u0026z={z}",
+                {"attribution": "Google Satellite", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            var marker_da9044895950f324baea72afe9eab1be = L.marker(
+                [25.8925044, -100.2610479],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_da9044895950f324baea72afe9eab1be.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDF Salinas Victoria<br><b>Dirección:</b> Carretera Salinas-Victoria km.5.5 Col. Satélite,C.P. 65500 Salinas Victoria, Nuevo León.<br><b>Tipo:</b> Fresco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cc7e7135d74f803ad345860842e8c247 = L.marker(
+                [19.6352431, -99.194294],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_cc7e7135d74f803ad345860842e8c247.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDF Cuautitlán<br><b>Dirección:</b> Autopista México-Querétaro km 36.8,C.P. 54700 Cuautitlán Izcalli, Estado de México.<br><b>Tipo:</b> Fresco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_15aaf6e9f4b9409bb2d5c7fa3fdb9f8d = L.marker(
+                [17.9740401, -93.1302367],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_15aaf6e9f4b9409bb2d5c7fa3fdb9f8d.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDF Villahermosa<br><b>Dirección:</b> Carretera Villahermosa-Cárdenas Km 164.1,Ranchería Anacleto Canabal,C.P. 86280,Villahermosa, Tabasco.<br><b>Tipo:</b> Fresco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2fbe6714e951ed5004bf035791dfeff9 = L.marker(
+                [20.5856206, -103.33013],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_2fbe6714e951ed5004bf035791dfeff9.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDF Guadalajara<br><b>Dirección:</b> Periférico Sur Manuel Gómez Morín No. 5890,Col. Artesanos,C.P. 45598 Tlaquepaque Jalisco.<br><b>Tipo:</b> Fresco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_26ff8966a9b03486ef5e22f249558a00 = L.marker(
+                [32.4450857, -117.0064243],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_26ff8966a9b03486ef5e22f249558a00.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDF Tijuana<br><b>Dirección:</b> Prolongación Club de Leones 10535.Fraccionamiento La Joya (La Gloria),C.P. 22674,Tijuana, Baja California Norte.<br><b>Tipo:</b> Fresco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eda6180bd89b94f893976a299ccac9ae = L.marker(
+                [15.783471, -90.23075899999999],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_eda6180bd89b94f893976a299ccac9ae.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDF Hermosillo<br><b>Dirección:</b> Av. Chetumal entre Guatemala y Belice No. 1121,Col. Álvaro Obregón,C.P. 83070 Hermosillo Sonora.<br><b>Tipo:</b> Fresco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_285497a8803ae888944892d6c7978d1c = L.marker(
+                [25.8925044, -100.2610479],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_285497a8803ae888944892d6c7978d1c.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDS Salinas Victoria<br><b>Dirección:</b> Carretera Salinas-Victoria km.5.5 Col. Satélite,C.P. 65500 Salinas Victoria, Nuevo León.<br><b>Tipo:</b> Seco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f9e4be2d88b628dd7b9589bfb1e67c4c = L.marker(
+                [19.6413645, -99.1825949],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_f9e4be2d88b628dd7b9589bfb1e67c4c.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDS Tultitlán<br><b>Dirección:</b> Km. 14.5 Carretera Puente de Vigas Cuautitlán, Col. Independencia S/N,C.P. 54900 Tultitlán Edo de México<br><b>Tipo:</b> Seco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7e5414e9a200ad11b73b00f704742d36 = L.marker(
+                [20.5010443, -100.1395169],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_7e5414e9a200ad11b73b00f704742d36.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDS Querétaro<br><b>Dirección:</b> Autopista México-Querétaro Km 186 S/N, Col Entronque El Ahorcado La Palma,C.P. 76700 Pedro Escobedo Querétaro.<br><b>Tipo:</b> Seco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8a1d0cc0df88b10d61946e560431275f = L.marker(
+                [20.5856206, -103.33013],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_8a1d0cc0df88b10d61946e560431275f.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDS Guadalajara<br><b>Dirección:</b> Periférico Sur Manuel Gómez Morín #5890, Col. Artesanos,C.P. 45598 Tlaquepaque, Jalisco.<br><b>Tipo:</b> Seco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_00bc7f89498589c68ddb27d7b5912b0c = L.marker(
+                [17.9740401, -93.1302367],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_00bc7f89498589c68ddb27d7b5912b0c.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDS Villahermosa<br><b>Dirección:</b> Carretera Villahermosa-Cárdenas Km 164.1,Ranchería Anacleto Canabal,C.P. 86280,Villahermosa, Tabasco.<br><b>Tipo:</b> Seco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9c1716ce693174ad1d6601105eb0af31 = L.marker(
+                [32.470829, -116.9922002],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_9c1716ce693174ad1d6601105eb0af31.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDS Tijuana<br><b>Dirección:</b> Av. Juan Alesio y Acapulco S/N y Blvd.Parque Ind. Pacífico, Tijuana B.C.,C.P. 22643 Tijuana, Baja California Norte.<br><b>Tipo:</b> Seco<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_77b1e3f74a5c6000f91e5b467d435746 = L.marker(
+                [19.627052, -99.1515031],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_77b1e3f74a5c6000f91e5b467d435746.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> CDEC México<br><b>Dirección:</b> Blvd. Benito Juárez 10 Bodega i3, San Mateo Cuautepec, Tultitlán, Estado de México C.P 54948<br><b>Tipo:</b> E-Commerce<br><b>Tienda:</b> Soriana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b68ca4192fedc21e1d14eb72f120ddf7 = L.marker(
+                [20.8561171, -86.8975875],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_b68ca4192fedc21e1d14eb72f120ddf7.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> Centro de Distribución Cancún<br><b>Dirección:</b> Carr. Cancún - Puerto Morelos, Km. 329.5 Cancún, Quintana Roo C.P. 77580        Tel: 99 8193 1395<br><b>Tipo:</b> nan<br><b>Tienda:</b> Chedraui
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_634f73f1e12c70c6834ccd16afca7941 = L.marker(
+                [20.5633672, -103.3177337],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_634f73f1e12c70c6834ccd16afca7941.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> Centro de Distribución Guadalajara<br><b>Dirección:</b> Carretera El Verde, El Castillo No. 2000, Col. Las Pintas, El Salto Jalisco, C.P.45690        Tel: 33 3689 5483, 33 3689 5713<br><b>Tipo:</b> nan<br><b>Tienda:</b> Chedraui
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_296104e4891256091f16c9d90f13ee64 = L.marker(
+                [24.1421574, -110.3234344],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_296104e4891256091f16c9d90f13ee64.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> Centro de Distribución La Paz<br><b>Dirección:</b> Colima S/N, Col. Pueblo Nuevo, La Paz Baja California Sur, C.P. 23060         Tel. 59 1917 9414 Ext. 4194<br><b>Tipo:</b> nan<br><b>Tienda:</b> Chedraui
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5696ec3e03c1f5d4a32c36b6852cb8c2 = L.marker(
+                [25.7123781, -100.303487],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_5696ec3e03c1f5d4a32c36b6852cb8c2.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> Centro de Distribución Monterrey<br><b>Dirección:</b> Jaime Nuno No. 3660, Col. Del Norte, Monterrey Nuevo León, C.P. 64500        Tel: 81 8331 7134, 81 8331 7578<br><b>Tipo:</b> nan<br><b>Tienda:</b> Chedraui
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_93b62ce9414db7c839716437af2caef1 = L.marker(
+                [19.7578494, -99.1580693],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_93b62ce9414db7c839716437af2caef1.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> Centro de Distribución Teoloyucan<br><b>Dirección:</b> Carretera Cuautitlán-Zumpango Lt. 28 Mz. 825, Col. Barrio San Juan Teoloyucan, Estado de México, C.P. 54770        Tel: 59 1917 9414<br><b>Tipo:</b> nan<br><b>Tienda:</b> Chedraui
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1f3e9dfc48f99d47215f560b619af195 = L.marker(
+                [18.4678181, -95.4374972],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_1f3e9dfc48f99d47215f560b619af195.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> Centro de Distribución Veracruz<br><b>Dirección:</b> Carretera Veracruz-Cardel, Calle tres zapotes Mza 2Km 236-500 INT 667, Parque Industrial Olmeca, Veracruz, Veracruz, C.P. 91808        Tel: 22 9923 3909<br><b>Tipo:</b> nan<br><b>Tienda:</b> Chedraui
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b1034f678a38d636c1dcfd04fbc3b125 = L.marker(
+                [17.9822823, -92.8254733],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_b1034f678a38d636c1dcfd04fbc3b125.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> Centro de Distribución Villahermosa<br><b>Dirección:</b> Carretera Villahermosa-Macuspana Km. 12.5, Coronel Traconi Centro, Villahermosa Tabasco, C.P. 86280        Tel: 99 3310 7300<br><b>Tipo:</b> nan<br><b>Tienda:</b> Chedraui
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_40cf5c4adf5d2321759307e849db1ddb = L.marker(
+                [22.2244102, -97.8636757],
+                {}
+            ).addTo(map_103e050c688d50a1d399f92c1904ecb5);
+        
+    
+            marker_40cf5c4adf5d2321759307e849db1ddb.bindTooltip(
+                `<div>
+                     <b>Nombre:</b> Centro de Distribución Tampico<br><b>Dirección:</b> Av. Hidalgo No. 501, Col. Del Pueblo, Tampico, Tamaulipas, C.P. 11950        Tel: 83 3226 6960<br><b>Tipo:</b> nan<br><b>Tienda:</b> Chedraui
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
